@@ -288,7 +288,7 @@ async function deleteSelectedRowsWrapper() {
     :change-page="(p: number) => props.loadGroupPage(vGroup, p)"
     :call-add-empty-row="(addAfter?: number) => addEmptyRow(vGroup, addAfter)"
     :expand-form="expandForm"
-    :row-height="rowHeight"
+    :row-height-enum="rowHeight"
     :delete-row="deleteRow"
     :delete-selected-rows="deleteSelectedRowsWrapper"
     :delete-range-of-rows="deleteRangeOfRows"
@@ -332,5 +332,3 @@ async function deleteSelectedRowsWrapper() {
     @prev="goToPreviousRow"
   />
 </template>
-
-<style scoped lang="scss"></style>

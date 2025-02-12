@@ -23,6 +23,7 @@ export const IsExpandedBulkUpdateFormOpenInj: InjectionKey<Ref<boolean>> = Symbo
 export const CellValueInj: InjectionKey<Ref<any>> = Symbol('cell-value-injection')
 export const ActiveViewInj: InjectionKey<Ref<ViewType>> = Symbol('active-view-injection')
 export const ReadonlyInj: InjectionKey<Ref<boolean>> = Symbol('readonly-injection')
+export const RawReadonlyInj: InjectionKey<Ref<boolean>> = Symbol('raw-readonly-injection')
 export const RowHeightInj: InjectionKey<Ref<1 | 2 | 4 | 6 | undefined>> = Symbol('row-height-injection')
 export const ScrollParentInj: InjectionKey<Ref<HTMLElement | undefined>> = Symbol('scroll-parent-injection')
 /** when shouldShowLoading bool is passed, it indicates if a loading spinner should be visible while reloading */
@@ -51,6 +52,7 @@ export const SharedViewPasswordInj: InjectionKey<Ref<string | null>> = Symbol('s
 export const CellUrlDisableOverlayInj: InjectionKey<Ref<boolean>> = Symbol('cell-url-disable-url')
 export const DropZoneRef: InjectionKey<Ref<Element | undefined>> = Symbol('drop-zone-ref')
 export const CellClickHookInj: InjectionKey<EventHook<MouseEvent> | undefined> = Symbol('cell-click-injection')
+export const OnDivDataCellEventHookInj: InjectionKey<EventHook<Event> | undefined> = Symbol('on-div-data-cell-event-injection')
 export const SaveRowInj: InjectionKey<(() => void) | undefined> = Symbol('save-row-injection')
 export const CurrentCellInj: InjectionKey<Ref<Element | undefined>> = Symbol('current-cell-injection')
 export const IsUnderLookupInj: InjectionKey<Ref<boolean>> = Symbol('is-under-lookup-injection')
@@ -73,6 +75,7 @@ export const TreeViewInj: InjectionKey<{
     disableTitleDiffCheck?: boolean,
   ) => void
   openViewDescriptionDialog: (view: ViewType) => void
+  openAutomationDescriptionDialog?: (automation: any) => void
   openTableDescriptionDialog: (table: TableType) => void
   contextMenuTarget: { type?: 'base' | 'base' | 'table' | 'main' | 'layout'; value?: any }
   tableRenameId: Ref<string>

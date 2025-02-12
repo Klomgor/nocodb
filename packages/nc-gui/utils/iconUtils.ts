@@ -74,6 +74,8 @@ import TableCurrent from '~icons/nc-icons/table-current'
 import Project from '~icons/nc-icons/project'
 import LookupIcon from '~icons/nc-icons/lookup'
 import FileImageIcon from '~icons/nc-icons/file-image'
+import AutomationIcon from '~icons/nc-icons/automations'
+import AiPlayIcon from '~icons/nc-icons/ai-play'
 
 import PhUsers from '~icons/ph/users'
 import PhUser from '~icons/ph/user'
@@ -222,6 +224,7 @@ import NcCircle from '~icons/nc-icons/circle'
 import NcServer1 from '~icons/nc-icons/server1'
 import NcThumbsUpOutline from '~icons/nc-icons/thumbs-up-outline'
 import NcNocoDB from '~icons/nc-icons/nocodb'
+import NcNocoDB1 from '~icons/nc-icons/nocodb1'
 
 // Sync data
 import NcAppleSolid from '~icons/nc-icons/apple_solid'
@@ -290,6 +293,8 @@ import NcOpenai from '~icons/nc-icons/openai'
 import NcClaude from '~icons/nc-icons/claude'
 import NcOllama from '~icons/nc-icons/ollama'
 import NcGroq from '~icons/nc-icons/groq'
+import NcPosthog from '~icons/nc-icons/posthog'
+import NcNocodbPg from '~icons/nc-icons/nocodb-pg'
 
 // Buttons Icons V2
 
@@ -470,6 +475,7 @@ import NcCloudOffIcon from '~icons/nc-icons-v2/cloud-off.svg'
 import NcMessageSquareIcon from '~icons/nc-icons-v2/message-square.svg'
 import NcEditIcon from '~icons/nc-icons-v2/edit.svg'
 import NcAlertCircleIcon from '~icons/nc-icons-v2/alert-circle.svg'
+import NcAlertCircleFilledIcon from '~icons/nc-icons-v2/alert-circle-filled.svg'
 import NcChevronsUpIcon from '~icons/nc-icons-v2/chevrons-up.svg'
 import NcUploadCloudIcon from '~icons/nc-icons-v2/upload-cloud.svg'
 import NcYoutubeIcon from '~icons/nc-icons-v2/youtube.svg'
@@ -542,6 +548,10 @@ import NcYoutube2Icon from '~icons/nc-icons/youtube2.svg'
 import NcRedditIcon from '~icons/nc-icons/reddit.svg'
 import NcTwitterIcon from '~icons/nc-icons/twitter-x-line.svg'
 import NcDiscordIcon from '~icons/nc-icons/discord.svg'
+import NcVerticalAlignTop from '~icons/nc-icons/align-vertical-top.svg'
+import NcVerticalAlignCenter from '~icons/nc-icons/align-vertical-center.svg'
+import NcVerticalAlignBottom from '~icons/nc-icons/align-vertical-bottom.svg'
+import NcAngleRotateCw from '~icons/nc-icons/angle-rotate-cw.svg'
 
 import NcSlash1 from '~icons/nc-icons/slash1'
 
@@ -592,11 +602,23 @@ import NcFileTypeUnknown from '~icons/nc-icons-v2/file-type-unknown'
 import NcFileSearch from '~icons/nc-icons-v2/file-search'
 import NcFileTypeJson from '~icons/nc-icons-v2/file-type-json'
 
+/* imports */
+
+import NcImportAirtable from '~icons/nc-icons-v2/import-airtable'
+import NcImportCsv from '~icons/nc-icons-v2/import-csv'
+import NcImportJson from '~icons/nc-icons-v2/import-json'
+import NcImportExcel from '~icons/nc-icons-v2/import-excel'
+import NcImportSheets from '~icons/nc-icons-v2/import-sheets'
+import NcImportSalesforce from '~icons/nc-icons-v2/import-salesforce'
+import NcImportMonday from '~icons/nc-icons-v2/import-monday'
+
 import NcHeading1 from '~icons/nc-icons-v2/heading-1'
 import NcHeading2 from '~icons/nc-icons-v2/heading-2'
 import NcHeading3 from '~icons/nc-icons-v2/heading-3'
 import NcQuote from '~icons/nc-icons-v2/quote'
 
+import NcPenLine from '~icons/nc-icons-v2/pen-line.svg'
+import NcNode from '~icons/nc-icons-v2/nc-node.svg'
 import NcErd from '~icons/nc-icons/erd'
 import NcInsertBefore from '~icons/nc-icons/insert-before'
 import NcInsertAfter from '~icons/nc-icons/insert-after'
@@ -692,6 +714,7 @@ import NcLogoZendeskColored from '~icons/nc-icons-v2/zendesk-colored.svg'
 import NcLogoZendesk from '~icons/nc-icons-v2/zendesk.svg'
 import NcLogoZohoColored from '~icons/nc-icons-v2/zoho-colored.svg'
 import NcLogoZoho from '~icons/nc-icons-v2/zoho.svg'
+import NcSendAlt from '~icons/nc-icons-v2/send-alt.svg'
 
 // keep it for reference
 // todo: remove it after all icons are migrated
@@ -894,7 +917,8 @@ export const iconMap = {
   cellAi: h(NcCellAi, { stroke: 'transparent' }),
   camera: NcCamera,
   megaPhone: NcMegaPhone,
-  nocodb: NcNocoDB,
+  nocodb: h(NcNocoDB, { stroke: 'transparent' }),
+  nocodb1: h(NcNocoDB1, { stroke: 'transparent' }),
   bulb: NcBulb,
   snow: NcSnow,
 
@@ -1215,6 +1239,8 @@ export const iconMap = {
   claude: NcClaude,
   ollama: NcOllama,
   groq: NcGroq,
+  posthog: h(NcPosthog, { stroke: 'transparent' }),
+  nocodbPg: h(NcNocodbPg, { stroke: 'transparent' }),
   refreshCw: NcRefreshCW,
   iconReddit: NcRedditIcon,
   iconTwitter: NcTwitterIcon,
@@ -1397,6 +1423,7 @@ export const iconMap = {
   ncMessageSquare: NcMessageSquareIcon,
   ncEDit2: NcEditIcon,
   ncAlertCircle: NcAlertCircleIcon,
+  ncAlertCircleFilled: NcAlertCircleFilledIcon,
   ncChevronsUp: NcChevronsUpIcon,
   ncUploadCloud: NcUploadCloudIcon,
   ncYoutube: NcYoutubeIcon,
@@ -1463,6 +1490,10 @@ export const iconMap = {
   ncShieldOff: NcShieldOffIcon,
   ncMousePointer: NcMousePointerIcon,
   ncAlignLeft: NcAlignLeftIcon,
+  ncVerticalAlignTop: NcVerticalAlignTop,
+  ncVerticalAlignCenter: NcVerticalAlignCenter,
+  ncVerticalAlignBottom: NcVerticalAlignBottom,
+  ncAngleRotateCw: NcAngleRotateCw,
   ncHeart: NcHeartIcon,
   ncTrendingUp: NcTrendingUpIcon,
   chevronUpSmall: NcChevronUpSmall,
@@ -1501,10 +1532,20 @@ export const iconMap = {
   ncFileSearch: h(NcFileSearch, { stroke: 'transparent' }),
   ncFileTypeJson: h(NcFileTypeJson, { stroke: 'transparent' }),
   ncErd: h(NcErd, { stroke: 'transparent' }),
+  ncPenLine: h(NcPenLine, { stroke: 'transparent' }),
+  ncNode: h(NcNode, { stroke: 'transparent' }),
+  importAirtable: h(NcImportAirtable, { stroke: 'transparent' }),
+  importCsv: h(NcImportCsv, { stroke: 'transparent' }),
+  importJson: h(NcImportJson, { stroke: 'transparent' }),
+  importExcel: h(NcImportExcel, { stroke: 'transparent' }),
+  importSheets: h(NcImportSheets, { stroke: 'transparent' }),
+  importSalesforce: h(NcImportSalesforce, { stroke: 'transparent' }),
+  importMonday: h(NcImportMonday, { stroke: 'transparent' }),
   ncHeading1: NcHeading1,
   ncHeading2: NcHeading2,
   ncHeading3: NcHeading3,
   ncQuote: NcQuote,
+  ncAutomation: AutomationIcon,
   ncWebhook: NcWebhook,
   ncLogoAsanaColored: h(NcLogoAsanaColored, { stroke: 'transparent' }),
   ncLogoAsana: h(NcLogoAsana, { stroke: 'transparent' }),
@@ -1594,6 +1635,8 @@ export const iconMap = {
   ncLogoZendesk: h(NcLogoZendesk, { stroke: 'transparent' }),
   ncLogoZohoColored: h(NcLogoZohoColored, { stroke: 'transparent' }),
   ncLogoZoho: h(NcLogoZoho, { stroke: 'transparent' }),
+  ncSendAlt: h(NcSendAlt, { stroke: 'transparent' }),
+  ncAiPlay: AiPlayIcon,
 }
 
 export const getMdiIcon = (type: string): any => {
@@ -3673,6 +3716,10 @@ export const searchableMap = {
   },
   ncAlertCircle: {
     icon: NcAlertCircleIcon,
+    keywords: ['Warning', 'Notification', 'Caution', 'Error', 'Alert'],
+  },
+  ncAlertCircleFilled: {
+    icon: NcAlertCircleFilledIcon,
     keywords: ['Warning', 'Notification', 'Caution', 'Error', 'Alert'],
   },
   ncChevronsUp: {

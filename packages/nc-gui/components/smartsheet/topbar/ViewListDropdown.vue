@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { type ViewType, ViewTypes } from 'nocodb-sdk'
+import { type ViewType, ViewTypes, viewTypeAlias } from 'nocodb-sdk'
 
 const { isMobileMode } = useGlobal()
 
@@ -64,7 +64,7 @@ const handleNavigateToView = async (view: ViewType) => {
  * It checks if the input string matches either the default view title (translated) or the view's title.
  * The matching is case-insensitive.
  */
-const filterOption = (input: string = '', view: ViewType) => {
+const filterOption = (input = '', view: ViewType) => {
   if (view.is_default && t('title.defaultView').toLowerCase().includes(input)) {
     return true
   }
@@ -112,6 +112,8 @@ async function onOpenModal({
   coverImageColumnId?: string
 }) {
   isOpen.value = false
+
+  $e('c:view:create:topbar', { view: type === 'AI' ? type : viewTypeAlias[type] })
 
   const isDlgOpen = ref(true)
 
